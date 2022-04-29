@@ -4,7 +4,6 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 0 10px;
   background: rgb(53, 169, 193);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -21,16 +20,15 @@ header{
   text-align: center;
 }
 
-
 select{
-  outline: none;
-  border-radius: 5px;
-  border: none;
+ border: none;
 }
+
 p{
   font-size: 18px;
   margin-bottom: 5px;
 }
+
 input{
   height: 50px;
   width: 95%;
@@ -38,12 +36,14 @@ input{
   padding: 0 15px;
   border: 2px solid #999;
 }
+
 .drop-list{
   display: flex;
   margin-top: 20px;
   align-items: center;
   justify-content: space-between;
 }
+
 .drop-list .select-box{
   display: flex;
   width: 115px;
@@ -58,16 +58,13 @@ input{
   font-size: larger;
 }
 
-button{
-    
+button{   
   height: 40px;
   width: 95%;
   font-size: 20px;
   cursor: zoom-in;
   background:rgb(53, 169, 193);
-
 }
-
 
 .icon{
   cursor: pointer;

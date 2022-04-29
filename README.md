@@ -1,6 +1,6 @@
 # currency-converter
 
-## Build With		
+## Built With		
 ### HTML
     * Tag Structure
 	* Text Structure

@@ -21,39 +21,41 @@ for (let i = 0; i < selectFromList.length; i++) {
     }
 }
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
     getExchangeRate();
 });
 
-getButton.addEventListener("click", e =>{
+getButton.addEventListener("click", e => {
     e.preventDefault();
     getExchangeRate();
 });
 
 const exchangeIcon = document.querySelector(".icon");
-exchangeIcon.addEventListener("click", ()=>{
+exchangeIcon.addEventListener ("click", ()=>{
     let tempCode = fromCurrency.value;
     fromCurrency.value = toCurrency.value;
     toCurrency.value = tempCode;
     getExchangeRate();
-})
+});
 
 
-function getExchangeRate() {
-       
+async function getExchangeRate() {
+
     let amountVal = amount.value;
-    if(amountVal == "" || amountVal == "0"){
+    if (amountVal == "" || amountVal == "0"){
         amount.value = "1";
         amountVal = 1;
-    }
+   
+    }  
     exchangeRateTxt.innerText = "Getting...";
     let url = `https://v6.exchangerate-api.com/v6/8ab27104b2e165a428af6d21/latest/${fromCurrency.value}`;
-    fetch(url)
+    await fetch(url)
     .then(response => response.json())
     .then(response =>{
         let exchangeRate = response.conversion_rates[toCurrency.value];
         let totalExRate = (amountVal * exchangeRate);
         exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExRate} ${toCurrency.value}`;
+    }).catch(() => {
+        exchangeRateTxt.innerText = "Something is wrong";
     });
 }
-
