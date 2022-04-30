@@ -39,5 +39,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Motivation
 As an immigrant, I have always had the urge to convert from AUD to my local currency.
 
-## Sources
-For Country Codes and Currency Codes (https://www.ups.com/worldshiphelp/WSA/ENG/AppHelp/mergedProjects/CORE/Codes/Country_Territory_and_Currency_Codes.htm)
